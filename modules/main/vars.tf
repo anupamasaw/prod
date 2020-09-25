@@ -1,6 +1,3 @@
-variable "okta_api_token" {
-  default = "00i-kiFKkTpcYuPZm-txWo8EFzNoXqj0Q7hLTJyBHU"
-}
 
 ### User ###
 variable "okta_user_first_name"{
