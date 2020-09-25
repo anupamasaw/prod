@@ -1,16 +1,16 @@
 
 ### User ###
 variable "okta_user_first_name"{
-  default = "Rohan" 
+  default = "Sohan" 
 }
 variable "okta_user_last_name"{
   default = "Singh"
 }
 variable "okta_user_login"{
-  default = "rohan@gmail.com"
+  default = "sohan@gmail.com"
 }
 variable "okta_user_email"{
-  default = "rohan@gmail.com"
+  default = "sohan@gmail.com"
 }
 
 ### Group ###
