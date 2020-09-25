@@ -9,6 +9,5 @@ provider "okta" {
 ### Group Block ###
 resource "okta_group" "test11" {
  name        = var.okta_group_name
- description = var.okta_group_description
-}
+ }
 
