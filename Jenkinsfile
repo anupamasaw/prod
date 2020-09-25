@@ -1,20 +1,17 @@
- pipeline {
+pipeline {
 
   agent any
- 
+
   stages {
 
+
     stage('TF Plan') {
-      steps {
+      steps {    
           sh 'terraform init'
-          sh """
-          export TF_VAR_okta_group_name=${params.groupname}
-
-          terraform plan -out myplan
-          """
+          sh 'terraform plan -out myplan'
         }
-      }
-
+      }      
+    
 
     stage('Approval') {
       steps {
@@ -26,14 +23,9 @@
 
     stage('TF Apply') {
       steps {
-          sh """
-          export TF_VAR_okta_group_name=${params.groupname}
-
-          
-          terraform apply -input=false -auto-approve myplan 
-          """
+          sh 'terraform apply -input=false myplan'
         }
       }
-  }
+  } 
 
 }
