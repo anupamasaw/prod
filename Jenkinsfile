@@ -9,7 +9,7 @@
           sh 'terraform init'
           sh """
           export TF_VAR_okta_group_name=${params.groupname}
-          export TF_VAR_okta_group_description=${params.description}
+#          export TF_VAR_okta_group_description=${params.description}
 
           terraform plan -out myplan
           """
@@ -29,7 +29,7 @@
       steps {
           sh """
           export TF_VAR_okta_group_name=${params.groupname}
-          export TF_VAR_okta_group_description=${params.description}
+#          export TF_VAR_okta_group_description=${params.description}
           
           terraform apply -input=false -auto-approve myplan 
           """
