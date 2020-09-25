@@ -8,7 +8,7 @@ resource okta_inline_hook test {
  channel = {
    type    = "HTTP"
    version = "1.0.0"
-   uri     = "https://example.com/test"
+   uri     = "https://example.com/demo"
    method  = "POST"
  }
 
